@@ -1,129 +1,118 @@
-🌾** Crop Production Prediction: A Smart Farming Solution**
+🌾 Crop Production Prediction: A Smart Farming Solution
+Introduction
+This project develops a predictive model and an interactive Streamlit web application to forecast crop production (in tons). By analyzing key agricultural factors, the solution aims to provide valuable insights for strategic planning in agriculture, enhancing food security and optimizing resource management.
 
-**🚀 Project Overview**
-This project focuses on building a predictive model and an interactive web application to forecast crop production (in tons) based on key agricultural factors. The goal is to provide valuable insights for better agricultural planning, food security, and optimized resource management.
+Business Use Cases
+Food Planning & Security: Aids governments and NGOs in effective food supply management.
 
-**✨ Business Use Cases**
-**Food Planning & Security:** Aiding governments and NGOs in managing food supply.
+Smart Agricultural Policies: Informs policymakers for impactful subsidies, insurance, and relief programs.
 
-**Smart Agricultural Policies:** Informing decisions on subsidies, insurance, and relief programs.
+Optimized Supply Chains: Helps agribusinesses streamline storage, transportation, and market supply.
 
-**Optimized Supply Chains:** Helping agribusinesses plan storage and transportation efficiently.
+Market Price Forecasting: Empowers farmers and traders with insights for optimal selling decisions.
 
-**Market Price Forecasting:** Empowering farmers and traders with insights for selling decisions.
+Precision Farming Guidance: Guides farmers in selecting suitable crops and optimizing resource usage.
 
-**Precision Farming Guidance:** Guiding farmers in optimal crop selection and resource usage.
+Agri-Tech Solutions Development: Provides crucial data for developing innovative agricultural tools.
 
-**Agri-Tech Solutions Development:** Providing data for innovative farming tools.
+Data Sources & Guidelines
+The project primarily utilizes the FAOSTAT_data.csv dataset, a comprehensive source of agricultural statistics.
 
-**💡 Key Features**
-**Data Preparation:** Robust cleaning and preprocessing of raw agricultural data.
+You can obtain the original dataset from its official source or your project's shared location. This file is excluded from the repository due to its size.
 
-**Exploratory Data Analysis (EDA):** In-depth analysis to uncover trends, distributions, and relationships.
+The project adheres to best practices in data science workflow, including data cleaning, robust modeling, and clear visualization.
 
-**Machine Learning Model:** A highly accurate regression model for predicting crop production.
+File Structure
+The core project files are organized as follows:
 
-**Interactive Streamlit App:** A user-friendly web interface for real-time predictions and historical context.
+Data_preprocessing.py: Handles data cleaning, preprocessing, and preparation.
 
-**📁 Project Structure**
-****Data_preprocessing.py: Script for data cleaning and initial preparation.
+EDA.py: Performs comprehensive Exploratory Data Analysis and generates visualizations.
 
-****EDA.py: Performs comprehensive exploratory data analysis and generates visualizations in the eda_plots/ directory.
+model_building.py: Contains scripts for training, evaluating, and saving the machine learning model.
 
-****model_building.py: Builds, trains, evaluates, and saves the best machine learning model (best_crop_production_model.pkl).
+Streamlit_app.py: The main Streamlit application script for the interactive dashboard.
 
-****Streamlit_app.py: The main script for the interactive web application.
+FAOSTAT_data_cleaned.csv: The processed and cleaned dataset used by the model and app.
 
-****FAOSTAT_data.csv: The raw input dataset (not committed due to size, but required).
+requirements.txt: Lists all Python libraries required to run the project.
 
-****FAOSTAT_data_cleaned.csv: The cleaned and prepared dataset used for modeling and the app.
+eda_plots/: Directory containing generated plots from EDA.
 
-****requirements.txt: Lists all necessary Python libraries to run the project.
+.gitignore: Specifies files and directories to be ignored by Git (e.g., raw data, trained model, virtual environment).
 
-****.gitignore: Specifies files/folders to be excluded from the Git repository.
+Your_Presentation_File.pptx: (Optional) Your project presentation slides.
 
-****eda_plots/: (Directory) Contains all generated plots from EDA.
-
-
-**🏃‍♀️ How to Run the Project Locally**
+How to Run Locally
 Follow these steps to set up and run the project on your machine:
 
-**Clone the Repository:**
+Clone the repository:
 
 git clone https://github.com/Roshan-25-cbe/Predicting-Crop-Production-Based-on-Agricultural-Data.git
 cd Predicting-Crop-Production-Based-on-Agricultural-Data
 
-**Download Raw Data:**
+Download Raw Data:
 
-Please obtain the FAOSTAT_data.csv dataset from its original source (or your project's shared drive/link) and place it directly into the project's root directory. This file is not included in the repository due to its size.
+Place the FAOSTAT_data.csv file into the project's root directory.
 
-**Create and Activate a Virtual Environment:**
+Create and activate a virtual environment:
 
 python -m venv venv
-# On Windows:
-.\venv\Scripts\activate
-# On macOS/Linux:
-source venv/bin/activate
 
-**Install Dependencies:**
+Windows (Command Prompt): .\venv\Scripts\activate
+
+Windows (Git Bash / PowerShell): source venv/Scripts/activate
+
+macOS/Linux: source venv/bin/activate
+
+Install dependencies:
 
 pip install -r requirements.txt
 
-**Run Data Preprocessing:**
-
-This script will clean the raw data and save FAOSTAT_data_cleaned.csv.
+Run Data Preprocessing:
 
 python Data_preprocessing.py
 
-**Run Exploratory Data Analysis (EDA):**
-
-This script generates various plots and insights, saving them in the eda_plots/ directory.
+Run Exploratory Data Analysis (EDA):
 
 python EDA.py
 
-**Build and Save the Machine Learning Model:**
-
-This script trains the prediction model and saves it as best_crop_production_model.pkl.
+Build and Save the Machine Learning Model:
 
 python model_building.py
 
-**Run the Streamlit Web Application:**
-
-Open your web browser and navigate to the local URL displayed in the terminal (usually http://localhost:8501).
+Run the Streamlit Dashboard:
 
 streamlit run Streamlit_app.py
 
+This will open the application in your web browser (usually http://localhost:8501).
 
-**📊 Key Insights & Results**
-**Dominant Crops & Regions:** Identified top cultivated crops and most agriculturally active regions.
+Note: For the "Historical Context" section in the app to populate, select an "Area" and "Crop Type" combination that exists in your FAOSTAT_data_cleaned.csv historical data.
 
-**Temporal Trends:** Observed how average 'Area harvested', 'Yield', and 'Production' have changed over the years.
+Technologies Used
+Python
 
-**Strong Relationships:** Confirmed a high correlation between 'Area harvested' and 'Production', and 'Yield' and 'Production', making them strong predictors.
+Streamlit
 
-**Model Performance:** The Random Forest Regressor proved to be the most accurate model, achieving an R-squared (R2) of over 0.99, demonstrating excellent predictive capability.
+Pandas, NumPy
 
-**Actionable Insights:** The project provides recommendations for strategic resource allocation, yield improvement, proactive supply chain management, and market stability.
+Scikit-learn
 
-**🛠️ Technologies Used**
-1.Python
+Matplotlib, Seaborn
 
-2.Pandas (Data Manipulation)
+Pickle
 
-3.NumPy (Numerical Operations)
+Presentation
+The project has been presented, and you can find the slides here
 
-4.Scikit-learn (Machine Learning)
+Project Author
+Roshan
 
-5.Matplotlib (Plotting)
+GitHub: Roshan-25-cbe
 
-6.Seaborn (Statistical Data Visualization)
+LinkedIn: www.linkedin.com/in/roshan-angamuthu-195ba230a
 
-7.Streamlit (Web Application Framework)
+Contact
+For any inquiries or collaboration opportunities, feel free to contact me:
 
-8.Pickle (Model Persistence)
-
-**📞 Contact**
-For any questions or further details, feel free to reach out:
-
-Roshan A  
-roshana36822@gmail.com
+Email: roshana36822@gmail.com
