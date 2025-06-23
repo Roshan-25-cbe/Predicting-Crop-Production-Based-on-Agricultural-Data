@@ -1,5 +1,6 @@
-🌾 Crop Production Prediction: A Smart Farming Solution
-Introduction
+**🌾 Crop Production Prediction: A Smart Farming Solution**
+
+**Introduction**
 This project develops a predictive model and an interactive Streamlit web application to forecast crop production (in tons). By analyzing key agricultural factors, the solution aims to provide valuable insights for strategic planning in agriculture, enhancing food security and optimizing resource management.
 
 Business Use Cases
